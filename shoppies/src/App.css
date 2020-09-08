@@ -1,0 +1,67 @@
+.App {
+  background-color: #F4F6F8; 
+  min-height: 150vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  margin: 2% 10%;
+  padding: 2%;
+  min-width: 70vw;
+}
+
+.searchbar {
+  background-color: white;
+  padding: 2% 5%;
+  border-radius: 10px;
+  width: 50vw;
+  display: block;
+}
+
+.result-block {
+  background-color: white;
+  padding: 2% 3.25%;
+  margin: 5% 4%;
+  border-radius: 10px;
+  width: 30vw;
+}
+
+.movieList {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px 5px;
+  width: 100%;
+}
+
+li {
+  float: left; 
+  margin-right: 10px; 
+}
+
+button {
+  display: block; 
+  margin: 0px 2px;
+}
+
+.results {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.nomination-complete {
+  background-color: #4caf50;
+  padding: 0% 2%;
+  margin: 0% 3%;
+  border-radius: 10px;
+  width: 53vw;
+  display: block;
+}
