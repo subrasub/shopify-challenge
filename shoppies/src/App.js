@@ -35,7 +35,6 @@ function App() {
     useEffect(() => {
         axios.get(`https://www.omdbapi.com/?s=${searchTerm.trim()}&apikey=d8a066c3`)
         .then(res => {
-            console.log(res)
             setMovies(res.data.Search.splice(0,5))
         })
         .catch(err => {
@@ -43,30 +42,21 @@ function App() {
         })
     }, [searchTerm])
 
-    useEffect(() => {
-        console.log("changes to nominations")
-    }, [nominations])
-
     const handleSearchInputChanges = (e) => {
         setSearchTerm(e.target.value)
     }
 
 
     function handleNominate (movie) {
-        console.log(movie)
         var nom = { id : movie.imdbID, Title: movie.Title, Year: movie.Year }
 
         setNominations([...nominations, nom])
         setDisabled(disabled => [...disabled, movie.imdbID]);
-        console.log(disabled)
-        console.log(nominations)
     }
 
     function handleRemove (movieID) {
         setDisabled(disabled => disabled.filter(item => item !== movieID))
-
         setNominations(nominations => nominations.filter(item => item.id !== movieID))
-        console.log(nominations)
     }
     
     return (
