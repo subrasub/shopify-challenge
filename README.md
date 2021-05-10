@@ -1,4 +1,4 @@
-# Shopify Winter 2021 Challenge
+# Shopify Winter 2021 Web-Developer Challenge
 Web-developer challenge
 
 Website hosted at: https://subrasub.github.io/shopify-challenge
